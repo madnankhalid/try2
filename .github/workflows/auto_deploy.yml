@@ -1,0 +1,23 @@
+name: Try2good page auto deployment
+
+on:
+  push:
+    branches: [master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+  # first step is compelted here. Ubuntu ki environemnt creat ho rahi for that
+    - name: Installing NPM ye kaam ho raha hy.
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: 12
+  # second step
+    - name: Installing surge in new environment
+      run: npm install --global surge
+  # third step website deployment
+    - name:Deploying using surge
+      run: surge ./ try2good.surge.sh --token ${{secrets.secret_token}}
