@@ -2,7 +2,7 @@ name: Try2good page auto deployment
 
 on:
   push:
-    branches: [master ]
+    branches: [master]
 
 jobs:
   build:
