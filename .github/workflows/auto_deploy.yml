@@ -19,5 +19,5 @@ jobs:
     - name: Installing surge in new environment
       run: npm install --global surge
   # third step website deployment
-    - name:Deploying using surge
-      run: surge ./ try2good.surge.sh --token ${{secrets.secret_token}}
+    - name: Deploying using surge
+      run: surge ./ try2good.surge.sh --token ${{secrets.SECRET_TOKEN}}
