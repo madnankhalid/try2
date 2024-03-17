@@ -21,3 +21,4 @@ jobs:
   # third step website deployment
     - name: Deploying using surge
       run: surge ./ try2good.surge.sh --token $ {{ secrets.SECRET_TOKEN }}
+      
